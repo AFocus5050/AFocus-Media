@@ -1,0 +1,215 @@
+.navbar {
+  background-color: #2c3e50; /* A professional dark blue/grey */
+  display: flex;
+  justify-content: space-between; /* This pushes logo left and links right */
+  align-items: center; /* Centers items vertically */
+  padding: 15px 30px; /* Adds some "breathing room" */
+}
+.nav-links {
+  display: flex;       /* This puts them in a row */
+  list-style: none;    /* This removes the bullet points */
+  margin: 0;
+  padding: 0;
+  gap: 20px;           /* This adds space between each link */
+}
+
+.nav-links a {
+  color: white;        /* Makes the text easy to read */
+  text-decoration: none; /* Removes the underline */
+}
+.hero {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically ↕️ */
+  justify-content: center; /* Centers items vertically in the section */
+  align-items: center;    /* Centers items horizontally */
+  text-align: center;     /* Centers the text lines themselves */
+  height: 60vh;           /* Makes the section take up 60% of the screen height */
+  background-color: #f4f4f4; /* A light grey to separate it from the white background */
+}
+.hero-btn {
+  background-color: #2c3e50; /* Matching your navbar */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;      /* Smooths the corners */
+  font-size: 1rem;
+  margin-top: 20px;        /* Pushes it away from the text */
+}
+.about-container {
+  display: flex;
+  flex-direction: row;    /* This puts the image and text side-by-side */
+  align-items: center;    /* Keeps them perfectly centered vertically */
+  justify-content: center; /* Centers the whole group on the screen */
+  padding: 50px;
+  gap: 40px;              /* Adds professional-looking space between them */
+}
+
+.about-img {
+  width: 300px;           /* Controls the size of your photo */
+  border-radius: 10px;    /* Optional: softens the edges */
+}
+
+.about-content {
+  max-width: 500px;       /* Keeps your text from stretching too far */
+}
+/* This rule only triggers on screens narrower than 600px */
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column; /* Stack vertically on phones ↕️ */
+    text-align: center;      /* Center the text for a better look */
+    padding: 20px
+    @media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Stacks cards vertically ↕️ */
+  }
+
+  }
+
+  .about-img {
+    width: 80%;             /* Let the image take up more width on phones */
+    margin-bottom: 20px;    /* Add space between the image and text */
+  }
+}
+.about-section {
+  padding: 60px 20px; /* 60px on top/bottom, 20px on left/right */
+  background-color: white; /* Keeps it distinct from the grey hero section */
+}
+.main-footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+.project-grid {
+  display: grid;
+  /* This creates 2 equal columns */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%; /* Makes the image fit inside the card */
+  border-radius: 4px;
+}
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooths the animation */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lifts the card up slightly ⬆️ */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds a deep shadow underneath */
+  border-color: #3498db; /* Optional: changes the border to a brand color */
+}
+.work-section {
+  background-color: #f9f9f9; /* A very light, professional grey */
+  padding: 60px 20px;       /* Adds breathing room at the top and bottom */
+  text-align: center;       /* Centers the "Our Work" title */
+}
+/* Apply the clean font to the whole body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6; /* Adds space between lines for readability */
+}
+
+/* Apply the bold font to all headings */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase; /* Optional: makes headings feel more like a brand */
+  letter-spacing: 1px;       /* Adds a tiny bit of space between letters */
+}
+.contact-section {
+  padding: 60px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto; /* Centers the form on the page */
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Keeps labels aligned to the left */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit; /* Ensures it uses your new Google Font */
+}
+input:focus, textarea:focus {
+  outline: none;            /* Removes the default browser glow */
+  border-color: #3498db;    /* Changes to a bright, professional blue */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Adds a soft outer glow */
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Starts slightly lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    /* Ends in its natural position */
+  }
+}
+.about-section, .work-section, .contact-section {
+  animation: fadeInUp 1s ease-out; /* Takes 1 second to fade in smoothly */
+}
+.about-section, .work-section, .contact-section {
+  animation: fadeInUp 1s ease-out; /* Takes 1 second to fade in smoothly */
+}
+/* About fades in first */
+.about-section {
+  animation-delay: 0.2s;
+}
+
+/* Our Work follows shortly after */
+.work-section {
+  animation-delay: 0.5s;
+}
+
+/* Contact section appears last */
+.contact-section {
+  animation-delay: 0.8s;
+}
+.about-section, .work-section, .contact-section {
+  animation: fadeInUp 1s ease-out forwards; 
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* This class will be added by our 'scout' later */
+.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* The first card pops in almost immediately */
+.project-card:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+/* The second card waits a bit longer */
+.project-card:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  /* 'cubic-bezier' creates a custom, high-end motion curve */
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
