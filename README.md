@@ -1,2 +1,1 @@
-# AFocus-Media
-My portfolio 
+
